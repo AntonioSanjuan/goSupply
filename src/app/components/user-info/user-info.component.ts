@@ -1,5 +1,5 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { IUserInfo, UserInfo } from 'src/app/models/user-info.model';
+import { Component, Input, OnChanges } from '@angular/core';
+import { IUserInfo } from 'src/app/models/user-info.model';
 
 @Component({
   selector: 'app-user-info',
@@ -10,10 +10,10 @@ export class UserInfoComponent implements OnChanges{
   @Input() userInfo!: IUserInfo
 
   ngOnChanges() {
-    this.loguserInfoChanges()
+    this.logUserInfoChanges()
   }
 
-  private loguserInfoChanges() {
+  private logUserInfoChanges() {
     console.log("userInfo", this.userInfo)
   }
 }
