@@ -10,4 +10,16 @@
     padding: 0px 50px;
     border-radius:  10px;
     border: 1px solid black;
+
+    .UserInto_Name {}
+    .UserInto_Age {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        button {
+            height: fit-content;
+        }
+    }
 }

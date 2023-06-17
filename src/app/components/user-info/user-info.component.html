@@ -1,4 +1,10 @@
 <div class="UserInto_MainContainer">
-    <p>Name: {{userInfo.name}}</p>
-    <p>Age: {{userInfo.age}}</p> 
+    <div class="UserInto_Name">
+        <p>Name: {{userInfo.name}}</p>
+    </div>
+    
+    <div class="UserInto_Age">
+        <p>Age: {{userInfo.age}}</p>  
+        <button type="button" (click)="increment()">+</button>
+    </div>
 </div>

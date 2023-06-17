@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { IUserInfo } from 'src/app/models/user-info.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { IUserInfo } from 'src/app/models/user-info.model';
 })
 export class UserInfoComponent implements OnChanges{
   @Input() userInfo!: IUserInfo
+  @Output() incrementAge = new EventEmitter<void>()
 
   ngOnChanges() {
     this.logUserInfoChanges()
@@ -15,5 +16,9 @@ export class UserInfoComponent implements OnChanges{
 
   private logUserInfoChanges() {
     console.log("userInfo", this.userInfo)
+  }
+
+  public increment() {
+    this.incrementAge.emit()
   }
 }
