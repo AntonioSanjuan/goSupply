@@ -12,4 +12,9 @@ export class UserSettingsComponent {
   constructor() {
     this.userInfo = new UserInfo()
   }
+
+  increment() {
+    this.userInfo.age = this.userInfo.age +1;
+    console.log(`new user age: ${this.userInfo.age}`)
+  }
 }

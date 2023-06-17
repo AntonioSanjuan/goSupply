@@ -2,5 +2,5 @@
     <label for="name">Enter your username:</label>
     <input [(ngModel)]="userInfo.name" id="name" required>
 
-    <app-user-info [userInfo]="userInfo"></app-user-info>
+    <app-user-info [userInfo]="userInfo" (incrementAge)="increment()"></app-user-info>
 </div>
