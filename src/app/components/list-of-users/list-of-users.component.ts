@@ -8,7 +8,7 @@ import {Observable, Subscription} from 'rxjs'
   styleUrls: ['./list-of-users.component.scss']
 })
 export class ListOfUsersComponent implements OnInit, OnDestroy{
-  public listOfUsers$!: Observable<IUserInfo[]>
+  public listOfUsers$!: Observable<any>
   private subscriptions: Subscription[] = []
   constructor(public userService: UsersService) {}
 
@@ -16,8 +16,14 @@ export class ListOfUsersComponent implements OnInit, OnDestroy{
     this.listOfUsers$ = this.userService.getListOfUsers()
 
     this.subscriptions.push(
-      this.userService.getListOfUsersAndCities().subscribe((data) => {
-        console.log("data", data)
+      this.userService.getListOfUsersAndCities().subscribe((data: any) => {
+        console.log("getListOfUsersAndCities", data)
+      })
+    )
+
+    this.subscriptions.push(
+      this.userService.getUserCityRelation().subscribe((data: any) => {
+        console.log("getListOfCitiesByUsers", data)
       })
     )
   }
