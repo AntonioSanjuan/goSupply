@@ -12,6 +12,5 @@ export class UsersService {
 
   public getListOfUsers(): Observable<IUserInfo[]> {
     return this.http.get<IUserInfo[]>(`https://6390b47b65ff4183111c4b91.mockapi.io/users/users`)
-
   }
 }
