@@ -1,0 +1,7 @@
+<div class="ListOfUsers_MainContainer">
+    <ul>
+        <li *ngFor="let user of listOfUsers$ | async">{{user.name}}
+            <span *ngIf="user.age > 18"> Menor de edad</span>
+        </li>
+    </ul>
+</div>
