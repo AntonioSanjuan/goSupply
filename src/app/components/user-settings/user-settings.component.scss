@@ -1,0 +1,13 @@
+.UserSettings_MainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:  10px;
+    border: 1px solid black;
+    gap: 10px;
+    
+    input {
+        width: 100px;
+        text-align: center;
+    }
+}
