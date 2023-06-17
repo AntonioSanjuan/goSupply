@@ -6,6 +6,8 @@ import { UserSettingsComponent } from './components/user-settings/user-settings.
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { FormsModule } from '@angular/forms';
 import { ListOfUsersComponent } from './components/list-of-users/list-of-users.component';
+import { UsersService } from './services/user-service/user-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,11 @@ import { ListOfUsersComponent } from './components/list-of-users/list-of-users.c
     ListOfUsersComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
